@@ -2,6 +2,8 @@
 <img src="./assets/redux-saga.jpg" />
 
 
+* Reference: <a href="https://oclipa.github.io/reactjs-cheat-sheet/">Cheatsheet</a>
+
 <p>A “saga” is essentially a function that runs in response to actions and handles all of the side-effects (e.g. accessing local storage, or querying a server) associated with the action.</p>
 
 <p>A side-effect is any behaviour that does not directly affect the Redux store (it might change the state, but is not directly consumed by the reducer).</p>
@@ -10,9 +12,12 @@
 <p>The basic pattern for the Redux Saga approach is:</p>
 
 * A **central saga** file is created that exposes all other sagas:
-export function rootSaga() { yield takeEvery(actionTypes.
+
 ```
-INITIATE_SOMETHING, doSideEffectsSaga); ...etc... }
+export function rootSaga() { 
+    yield takeEvery(actionTypes.INITIATE_SOMETHING, doSideEffectsSaga); 
+    ...etc... 
+}
 ```
 * The sagas are registered with the middleware:
 ```
