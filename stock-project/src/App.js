@@ -1,23 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import AddCategory from './components/AddCategory';
+import DisplayData from './components/DisplayData';
+import GetCategories from './components/GetCategories';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='row App'>
+      <div className="column"> <AddCategory/> </div>
+      <div className="column"> <GetCategories/></div>
+      <div className="column"> <DisplayData /> </div>
     </div>
   );
 }
